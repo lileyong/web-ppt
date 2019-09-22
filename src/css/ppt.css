@@ -1,0 +1,70 @@
+.ppt {
+    padding-bottom: 60px;
+}
+
+.title {
+    padding-top: 200px;
+    padding-bottom: 100px;
+    font-size: 70px;
+    text-align: center;
+}
+
+.subtitle {
+    padding: 80px 20px  60px 20px;
+    font-size: 50px;
+    text-align: center;
+}
+
+.smalltitle {
+    padding: 0 20px;
+    line-height: 2;
+    font-size: 42px;
+}
+
+.center {
+    text-align: center;
+}
+
+.middle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    margin: 0 auto 20px auto;
+    width: 80%;
+}
+
+h2 {
+    padding-bottom: 8px;
+    font-size: 32px;
+    line-height: 1.5;
+}
+
+h3 {
+    padding-bottom: 8px;
+    font-size: 28px;
+    line-height: 1.5;
+}
+
+p {
+    font-size: 24px;
+    line-height: 1.5;
+}
+
+img {
+    margin: 8px auto;
+    display: block;
+    max-width: 100%;
+}
+
+code {
+    margin: 8px 0;
+    display: inline-block;
+    padding: 8px 10px;
+    line-height: 24px;
+    background-color: #000;
+    font-size: 20px;
+    color: #fff;
+}
