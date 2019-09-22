@@ -75,7 +75,7 @@ if (isDev) {
     webpackConfig.devtool = '#cheap-module-eval-source-map'
 } else {
     webpackConfig.entry = {
-        app: path.join(__dirname, 'js/main.js'),
+        app: path.join(__dirname, 'src/index.js'),
         vendor: ['vue', 'element-ui']
     }
     webpackConfig.output.filename = '[name].[chunkhash:8].js'
