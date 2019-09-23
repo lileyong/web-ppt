@@ -6,7 +6,6 @@
 
 <script>
 import debounce from 'loadsh/debounce'
-import hljs from 'highlight.js';
 
 export default {
     data() {
