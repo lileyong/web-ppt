@@ -65,6 +65,11 @@ const webpackConfig = {
             }
         })
     ],
+    resolve: {
+        alias: {
+            src: path.resolve(__dirname, 'src')
+        }
+    },
     output: {
         filename: 'bundle.js',
         path: path.join(__dirname, 'dist')
