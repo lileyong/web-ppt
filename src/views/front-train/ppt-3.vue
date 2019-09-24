@@ -45,7 +45,7 @@
         <section>
             <h2>7、相关参考</h2>
             <p>开发指南：<a href="http://192.168.1.156:3000/">http://192.168.1.156:3000/</a></p>
-            <p>vue官方文档：<a href="https://cn.vuejs.org/v2/guide/">https://cn.vuejs.org/v2/guide/</a</p>
+            <p>vue官方文档：<a href="https://cn.vuejs.org/v2/guide/">https://cn.vuejs.org/v2/guide/</a></p>
             <p>element-ui文档：<a href="http://192.168.1.156:8085/#/zh-CN/component/installation">http://192.168.1.156:8085/#/zh-CN/component/installation</a></p>
         </section>
     </div>
