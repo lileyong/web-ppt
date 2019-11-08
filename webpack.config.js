@@ -1,104 +1,103 @@
 const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 const {
     VueLoaderPlugin
 } = require('vue-loader')
-const HTMLWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const CleanWebpackPlugin = require('clean-webpack-plugin')
+const {
+    CleanWebpackPlugin
+} = require('clean-webpack-plugin')
+const PrerenderSPAPlugin = require('prerender-spa-plugin')
 
-const isDev = process.env.NODE_ENV === 'development'
-const webpackConfig = {
-    mode: process.env.NODE_ENV,
-    entry: path.join(__dirname, 'src/index.js'),
-    devServer: {
-        port: 8888,
-        open: true,
-        overlay: {
-            errors: true
-        }
-    },
-    module: {
-        rules: [{
-            test: /\.vue$/,
-            loader: 'vue-loader'
-        }, {
-            test: /\.jsx$/,
-            loader: 'babel-loader'
-        }, {
-            test: /\.css$/,
-            use: [
-                'style-loader',
-                'css-loader'
-            ]
-        }, {
-            test: /\.styl/,
-            use: [
-                isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
-                'css-loader',
-                {
-                    loader: 'postcss-loader',
-                    options: {
-                        sourceMap: true
-                    }
-                },
-                'stylus-loader'
-            ]
-        }, {
-            test: /\.(jpg|jpeg|png|svg|gif)$/,
-            use: [{
-                loader: 'url-loader',
+module.exports = function (env, argv) {
+    const cssLoader = [
+        env.production ? MiniCssExtractPlugin.loader : 'style-loader',
+        'css-loader',
+        'postcss-loader'
+    ]
+
+    const obj = {
+        mode: env.production ? 'production' : 'development',
+        entry: {
+            main: 'src/index.js',
+            vendor: ['vue']
+        },
+        devServer: {
+            open: true,
+            historyApiFallback: true
+        },
+        module: {
+            rules: [{
+                enforce: 'pre',
+                test: /\.(js|vue)$/,
+                loader: 'eslint-loader',
                 options: {
-                    limit: 1024,
-                    name: '[name].[ext]'
+                    fix: true
                 }
+            }, {
+                test: /\.vue$/,
+                use: 'vue-loader'
+            }, {
+                test: /\.css$/,
+                use: cssLoader
+            }, {
+                test: /\.(scss|sass)$/,
+                use: cssLoader.concat('sass-loader')
+            }, {
+                test: /\.styl$/,
+                use: cssLoader.concat('stylus-loader')
+            }, {
+                test: /\.jsx$/,
+                loader: 'babel-loader'
+            }, {
+                test: /\.(jpg|jpeg|png|svg|gif)$/,
+                use: [{
+                    loader: 'url-loader',
+                    options: {
+                        limit: 1024,
+                        name: '[name].[ext]'
+                    }
+                }]
+            }, {
+                test: /\.(ttf|eot|woff)$/,
+                loader: 'file-loader'
             }]
-        }, {
-            test: /\.(ttf|eot|woff)$/,
-            loader: 'file-loader'
-        }]
-    },
-    plugins: [
-        new VueLoaderPlugin(),
-        new HTMLWebpackPlugin({
-            title: '财务前端开发培训',
-            meta: {
-                keywords: '财务,前端,开发,培训',
-                description: '财务前端开发培训'
+        },
+        plugins: [
+            new HtmlWebpackPlugin(),
+            new VueLoaderPlugin(),
+            new PrerenderSPAPlugin({
+                staticDir: path.resolve(__dirname, 'dist'),
+                routes: ['/', '/home']
+            })
+        ],
+        resolve: {
+            alias: {
+                src: path.resolve(__dirname, 'src')
             }
-        })
-    ],
-    resolve: {
-        alias: {
-            src: path.resolve(__dirname, 'src')
-        }
-    },
-    output: {
-        filename: 'bundle.js',
-        path: path.join(__dirname, 'dist')
-    }
-}
-
-if (isDev) {
-    webpackConfig.devtool = '#cheap-module-eval-source-map'
-} else {
-    webpackConfig.entry = {
-        app: path.join(__dirname, 'src/index.js'),
-        vendor: ['vue', 'element-ui']
-    }
-    webpackConfig.output.filename = '[name].[chunkhash:8].js'
-    webpackConfig.plugins.push(
-        new CleanWebpackPlugin(['dist']),
-        new MiniCssExtractPlugin({
-            filename: '[name].[chunkhash:8].css',
-            chunkFilename: '[id].css'
-        })
-    )
-    webpackConfig.optimization = {
-        splitChunks: {
-            name: 'vendor',
-            chunks: 'all'
+        },
+        optimization: {
+            splitChunks: {
+                name: 'vendor',
+                chunks: 'all'
+            }
+        },
+        output: {
+            path: path.resolve(__dirname, 'dist'),
+            filename: '[name].[chunkhash:8].js'
         }
     }
-}
 
-module.exports = webpackConfig
+    if (env.development) {
+        obj.devtool = 'source-map'
+    } else {
+        obj.plugins = obj.plugins.concat([
+            new CleanWebpackPlugin(),
+            new MiniCssExtractPlugin({
+                filename: '[name].[chunkhash:8].css'
+            })
+        ])
+    }
+
+    return obj
+}
