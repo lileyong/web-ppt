@@ -6,11 +6,11 @@ Vue.use(VueRouter)
 var routes = []
 const context = require.context('./', true, /^\.\/[^/]+\/.+\.js$/)
 context.keys().forEach(key => {
-  routes = routes.concat(context(key).default)
+    routes = routes.concat(context(key).default)
 })
 
 const router = new VueRouter({
-  routes
+    routes
 })
 
 export default router
