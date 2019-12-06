@@ -1,6 +1,10 @@
 <template>
     <div class="console" @keyup.native.left="prevPage" @keyup.native.right="nextPage">
         <router-view></router-view>
+        <div class="controls">
+            <div class="controls-btn" id="prev"></div>
+            <div class="controls-btn" id="next"></div>
+        </div>
     </div>
 </template>
 
@@ -45,6 +49,27 @@ export default {
 }
 </script>
 
-<style>
-    @import url(../../css/ppt.css);
+<style src="../../css/ppt.css"></style>
+<style scoped>
+.controls {
+    position: absolute;
+    right: 10px;
+    bottom: 30px;
+    display: flex;
+    justify-content: space-around;
+    width: 110px;
+}
+.controls .controls-btn {
+    width: 0;
+    height: 0;
+    border: 12px solid transparent;
+}
+.controls #prev {
+    border-right-width: 22px;
+    border-right-color:#24C77E;
+}
+.controls #next {
+    border-left-width: 22px;
+    border-left-color:#24C77E;
+}
 </style>
