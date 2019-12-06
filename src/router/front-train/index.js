@@ -1,4 +1,4 @@
-import Console from 'src/views/console/index.vue'
+import Console from 'src/components/console/index.vue'
 import PPT_1 from 'src/views/front-train/ppt-1.vue'
 import PPT_2 from 'src/views/front-train/ppt-2.vue'
 import PPT_3 from 'src/views/front-train/ppt-3.vue'
