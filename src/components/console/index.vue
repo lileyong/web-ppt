@@ -1,6 +1,8 @@
 <template>
     <div class="console" @keyup.native.left="prevPage" @keyup.native.right="nextPage">
-        <router-view></router-view>
+        <div class="content">
+            <router-view></router-view>
+        </div>
         <div class="controls">
             <div class="controls-btn" id="prev"></div>
             <div class="controls-btn" id="next"></div>
@@ -51,13 +53,28 @@ export default {
 
 <style src="../../css/ppt.css"></style>
 <style scoped>
+.console {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.console .content {
+    height: 100%;
+    overflow: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
 .controls {
     position: absolute;
     right: 10px;
-    bottom: 30px;
+    bottom: 10px;
     display: flex;
-    justify-content: space-around;
     width: 110px;
+    height: 110px;
+    justify-content: space-between;
+    align-items: center;
 }
 .controls .controls-btn {
     width: 0;
@@ -66,10 +83,10 @@ export default {
 }
 .controls #prev {
     border-right-width: 22px;
-    border-right-color:#24C77E;
+    border-right-color: #24c77e;
 }
 .controls #next {
     border-left-width: 22px;
-    border-left-color:#24C77E;
+    border-left-color: #24c77e;
 }
 </style>

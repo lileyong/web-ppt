@@ -1,5 +1,6 @@
 .ppt {
     padding-bottom: 60px;
+    background: url(../img/ppt-bg.png) right 10px top 10px / 246px 100px no-repeat;
 }
 
 .title {
@@ -10,7 +11,7 @@
 }
 
 .subtitle {
-    padding: 80px 20px  60px 20px;
+    padding: 80px 20px 60px 20px;
     font-size: 50px;
     text-align: center;
 }
