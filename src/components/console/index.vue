@@ -7,6 +7,7 @@
             <div class="controls-btn" id="prev"></div>
             <div class="controls-btn" id="next"></div>
         </div>
+        <el-progress></el-progress>
     </div>
 </template>
 

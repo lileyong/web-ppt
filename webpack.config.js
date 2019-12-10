@@ -7,7 +7,6 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const {
     CleanWebpackPlugin
 } = require('clean-webpack-plugin')
-const PrerenderSPAPlugin = require('prerender-spa-plugin')
 
 module.exports = function (env, argv) {
     const cssLoader = [
@@ -65,11 +64,7 @@ module.exports = function (env, argv) {
         },
         plugins: [
             new HtmlWebpackPlugin(),
-            new VueLoaderPlugin(),
-            new PrerenderSPAPlugin({
-                staticDir: path.resolve(__dirname, 'dist'),
-                routes: ['/', '/home']
-            })
+            new VueLoaderPlugin()
         ],
         resolve: {
             alias: {

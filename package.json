@@ -12,7 +12,8 @@
     "author": "promise.li",
     "license": "MIT",
     "dependencies": {
-        "element-ui": "^2.4.8",
+        "element-ui": "^2.13.0",
+        "eslint-loader": "^3.0.3",
         "loadsh": "^0.0.4",
         "vue": "^2.5.17",
         "vue-hljs": "^1.1.2",
