@@ -1,9 +1,7 @@
 <template>
     <div class="console" @keyup.native.left="prevPage" @keyup.native.right="nextPage">
         <div class="content">
-            <transition name="slide">
-                <router-view></router-view>
-            </transition>
+            <router-view></router-view>
         </div>
         <div class="controls">
             <div class="controls-btn" id="prev" @click="prevPage"></div>
