@@ -1,7 +1,10 @@
 <template>
     <div class="ppt">
-        <h1 class="title">预渲染及其在收银台项目中的运用</h1>
-        <p class="smalltitle center">promise.li</p>
-        <p class="smalltitle center">2019/12/15</p>
+        <h2 class="subtitle">单页面的痛点</h2>
+        <section width="300px">
+            <p class="smalltitle">1、首屏加载慢</p>
+            <p class="smalltitle">2、白屏</p>
+            <p class="smalltitle">3、SEO</p>
+        </section>
     </div>
 </template>

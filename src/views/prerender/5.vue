@@ -1,7 +1,10 @@
 <template>
     <div class="ppt">
-        <h1 class="title">预渲染及其在收银台项目中的运用</h1>
-        <p class="smalltitle center">promise.li</p>
-        <p class="smalltitle center">2019/12/15</p>
+        <h2 class="subtitle">SSR</h2>
+        <section width="300px">
+            <p class="smalltitle">定义：服务端渲染输出HTML视图</p>
+            <p class="smalltitle">优点：解决了首屏白屏、SEO问题</p>
+            <p class="smalltitle">缺点：开发成本增加、服务端压力</p>
+        </section>
     </div>
 </template>
