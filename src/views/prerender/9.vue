@@ -1,7 +1,19 @@
 <template>
     <div class="ppt">
-        <h1 class="title">预渲染及其在收银台项目中的运用</h1>
-        <p class="smalltitle center">promise.li</p>
-        <p class="smalltitle center">2019/12/15</p>
+        <h2 class="subtitle">使用</h2>
+        <div v-highlight>
+            <pre>
+                <code>const PrerenderSPAPlugin = require('prerender-spa-plugin')
+
+module.exports = {
+    plugins: [
+        new PrerenderSPAPlugin({
+            staticDir: path.join(__dirname, 'dist'),
+            routes: ['/', '/about', '/contact']
+        })
+    ]
+}</code>
+            </pre>
+        </div>
     </div>
 </template>

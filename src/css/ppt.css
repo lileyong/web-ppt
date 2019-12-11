@@ -61,11 +61,12 @@ img {
 }
 
 code {
-    margin: 8px 0;
-    display: inline-block;
+    margin: 8px auto;
     padding: 8px 10px;
-    line-height: 24px;
+    display: block;
+    width: 80%;
+    line-height: 36px;
     background-color: #000;
-    font-size: 20px;
+    font-size: 24px;
     color: #fff;
 }
