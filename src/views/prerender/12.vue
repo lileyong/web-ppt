@@ -1,5 +1,6 @@
 <template>
     <div class="ppt">
-        <h1 class="title">在收银台项目中的运用</h1>
+        <h2 class="subtitle">参考文档</h2>
+        <section width="300px"></section>
     </div>
 </template>
