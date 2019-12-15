@@ -1,8 +1,6 @@
-const routes = [
-    {
-        path: '/',
-        redirect: '/front-train/ppt-1'
-    }
-]
+const routes = [{
+    path: '/',
+    redirect: '/puppeteer/1'
+}]
 
 export default routes
