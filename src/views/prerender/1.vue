@@ -1,21 +1,11 @@
 <template>
-    <div class="ppt">
-        <spokesman-box>
+    <div class="ppt center">
+        <ppt-spokesman>
             <h1 class="title">预渲染及其在收银台项目中的运用</h1>
             <p class="smalltitle center">promise.li</p>
-        </spokesman-box>
+        </ppt-spokesman>
     </div>
 </template>
-
-<script>
-import SpokesmanBox from 'src/widgets/spokesman-box.vue'
-
-export default {
-    components: {
-        SpokesmanBox
-    }
-}
-</script>
 
 <style scoped>
 .container {

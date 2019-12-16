@@ -5,6 +5,12 @@
     </div>
 </template>
 
+<script>
+export default {
+    name: 'ppt-spokesman'
+}
+</script>
+
 <style scoped>
 .spokesman-box {
     position: relative;

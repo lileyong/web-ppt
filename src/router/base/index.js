@@ -1,6 +1,6 @@
 const routes = [{
     path: '/',
-    redirect: '/puppeteer/1'
+    redirect: '/prerender/1'
 }]
 
 export default routes

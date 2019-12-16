@@ -1,19 +1,9 @@
 <template>
-    <div class="ppt">
+    <div class="ppt center">
         <section width="300px">
-            <text-box class="center">起步</text-box>
-            <text-box class="center">使用</text-box>
-            <text-box class="center">实践</text-box>
+            <ppt-chapter>第一章 初识预渲染</ppt-chapter>
+            <ppt-chapter>第二章 如何使用</ppt-chapter>
+            <ppt-chapter>第三章 在收银台项目中的运用</ppt-chapter>
         </section>
     </div>
 </template>
-
-<script>
-import TextBox from 'src/widgets/text-box.vue'
-
-export default {
-    components: {
-        TextBox
-    }
-}
-</script>
