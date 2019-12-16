@@ -16,10 +16,10 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 0 36px;
+    padding: 0 35px;
     min-width: 424px;
-    min-height: 62px;
-    border-radius: 31px;
+    min-height: 60px;
+    border-radius: 30px;
     background-color: rgb(76, 166, 102);
     font-size: 26px;
     font-weight: bold;

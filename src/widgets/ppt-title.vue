@@ -12,7 +12,7 @@ export default {
 
 <style scoped>
 .ppt-title {
-    margin: 50px 45px 0 45px;
+    margin: 50px 50px 0 50px;
     font-size: 20px;
     font-weight: bold;
     color: #333;
