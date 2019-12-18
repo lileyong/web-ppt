@@ -107,6 +107,9 @@ code {
     margin-top: -197px;
     margin-right: 108px;
 }
+.ppt-steps-wrap[data-v-33cafa74] {
+    margin-top: 60px;
+}
 
 
 * {
@@ -185,5 +188,40 @@ body {
     width: 90%;
     line-height: 36px;
     font-size: 24px;
+}
+
+
+.ppt-steps[data-v-2de594b6] {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+    max-width: 90%;
+}
+.step-item[data-v-2de594b6] {
+    position: relative;
+    margin: 0 20px 20px 0;
+    padding: 6px 24px;
+    line-height: 36px;
+    border-radius: 24px;
+    background-color: #0cb46a;
+    font-size: 18px;
+    color: #fff;
+}
+.step-item[data-v-2de594b6]::after {
+    content: '';
+    position: absolute;
+    right: -20px;
+    top: 23px;
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: #0cb46a;
+}
+.step-item[data-v-2de594b6]:last-child {
+    margin-right: 0;
+}
+.step-item[data-v-2de594b6]:last-child::after {
+    display: none;
 }
 
