@@ -24,13 +24,6 @@ export default {
 </script>
 
 <style scoped>
-.img-box {
-    overflow: hidden;
-}
-.img-box img {
-    margin-top: -197px;
-    margin-right: 108px;
-}
 .ppt-steps-wrap {
     margin-top: 60px;
 }
