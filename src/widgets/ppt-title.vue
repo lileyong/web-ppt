@@ -12,9 +12,10 @@ export default {
 
 <style scoped>
 .ppt-title {
-    margin: 50px 50px 0 50px;
-    font-size: 20px;
-    font-weight: bold;
-    color: #333;
+    padding: 20px 35px;
+    line-height: 48px;
+    font-size: 36px;
+    font-weight: bolder;
+    color: #0cb46a;
 }
 </style>

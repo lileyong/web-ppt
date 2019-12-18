@@ -16,25 +16,25 @@ export default {
     position: relative;
     display: flex;
     flex-direction: column;
-    width: 544px;
-    height: 124px;
     justify-content: center;
-    border-radius: 62px;
+    width: 816px;
+    height: 186px;
+    border-radius: 93px;
     background-color: rgb(76, 166, 102);
 }
 .spokesman-box .spokesman {
     position: absolute;
-    right: 16px;
-    top: -42px;
+    right: 10px;
+    bottom: -25px;
 }
 .spokesman-box h1 {
     padding: 0 168px 3px 62px;
-    font-size: 24px;
+    font-size: 36px;
     color: #fff;
 }
 .spokesman-box p {
-    padding-left: 62px;
-    font-size: 22px;
+    padding: 10px 62px;
+    font-size: 32px;
     color: #fff;
 }
 </style>
