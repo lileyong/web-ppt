@@ -13,4 +13,11 @@ const router = new VueRouter({
     routes
 })
 
+router.beforeEach((to, from, next) => {
+    const routeTitle = to.name || window.localStorage.getItem('routeTitle') || 'Webpack App'
+    document.title = routeTitle
+    window.localStorage.setItem('routeTitle', routeTitle)
+    next()
+})
+
 export default router

@@ -1,18 +1,5 @@
 <template>
     <div class="ppt superiority">
-        <ppt-title>参考文档</ppt-title>
-        <ppt-list :list="list" style="margin-top: 30px;"></ppt-list>
+        <ppt-title>曙光：测试环境BOSS系统构建成功</ppt-title>
     </div>
 </template>
-
-<script>
-export default {
-    data () {
-        return {
-            list: [
-                { title: 'prerender-spa-plugin：https://github.com/chrisvfritz/prerender-spa-plugin' }
-            ]
-        }
-    }
-}
-</script>

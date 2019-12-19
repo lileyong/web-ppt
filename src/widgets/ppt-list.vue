@@ -6,6 +6,7 @@
             <ppt-code v-if="item.code">
                 <pre><code>{{ item.code }}</code></pre>
             </ppt-code>
+            <ppt-list v-if="item.list" :list="item.list"></ppt-list>
         </div>
     </div>
 </template>
@@ -36,6 +37,7 @@ export default {
         &::before {
             content: '';
             margin-right: 10px;
+            flex-shrink: 0;
             display: block;
             width: 20px;
             height: 20px;

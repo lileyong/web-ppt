@@ -1,5 +1,22 @@
 <template>
     <div class="ppt superiority">
-        <ppt-title>双屏问题</ppt-title>
+        <ppt-title>使用注意事项</ppt-title>
+        <ppt-list :list="list"></ppt-list>
     </div>
 </template>
+
+<script>
+export default {
+    data () {
+        return {
+            list: [
+                {
+                    title: '预渲染仅支持单页应用的HTML5 history API模式'
+                },
+                {
+                    title: '需在根节点设置data-server-rended="true",否则会渲染出来两个页面。'
+                }]
+        }
+    }
+}
+</script>

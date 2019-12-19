@@ -20,11 +20,17 @@ import PPT_18 from 'src/views/prerender/18.vue'
 import PPT_19 from 'src/views/prerender/19.vue'
 import PPT_20 from 'src/views/prerender/20.vue'
 import PPT_21 from 'src/views/prerender/21.vue'
+import PPT_22 from 'src/views/prerender/22.vue'
+import PPT_23 from 'src/views/prerender/23.vue'
+import PPT_24 from 'src/views/prerender/24.vue'
+import PPT_25 from 'src/views/prerender/25.vue'
+import PPT_26 from 'src/views/prerender/26.vue'
 
 const routes = [{
     path: '/prerender',
     component: Console,
     children: [{
+        name: '预渲染及其在收银台项目中的运用',
         path: '1',
         component: PPT_1
     },
@@ -107,6 +113,26 @@ const routes = [{
     {
         path: '21',
         component: PPT_21
+    },
+    {
+        path: '22',
+        component: PPT_22
+    },
+    {
+        path: '23',
+        component: PPT_23
+    },
+    {
+        path: '24',
+        component: PPT_24
+    },
+    {
+        path: '25',
+        component: PPT_25
+    },
+    {
+        path: '26',
+        component: PPT_26
     }
     ]
 }]
