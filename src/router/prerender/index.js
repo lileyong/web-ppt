@@ -11,6 +11,15 @@ import PPT_9 from 'src/views/prerender/9.vue'
 import PPT_10 from 'src/views/prerender/10.vue'
 import PPT_11 from 'src/views/prerender/11.vue'
 import PPT_12 from 'src/views/prerender/12.vue'
+import PPT_13 from 'src/views/prerender/13.vue'
+import PPT_14 from 'src/views/prerender/14.vue'
+import PPT_15 from 'src/views/prerender/15.vue'
+import PPT_16 from 'src/views/prerender/16.vue'
+import PPT_17 from 'src/views/prerender/17.vue'
+import PPT_18 from 'src/views/prerender/18.vue'
+import PPT_19 from 'src/views/prerender/19.vue'
+import PPT_20 from 'src/views/prerender/20.vue'
+import PPT_21 from 'src/views/prerender/21.vue'
 
 const routes = [{
     path: '/prerender',
@@ -62,6 +71,42 @@ const routes = [{
     {
         path: '12',
         component: PPT_12
+    },
+    {
+        path: '13',
+        component: PPT_13
+    },
+    {
+        path: '14',
+        component: PPT_14
+    },
+    {
+        path: '15',
+        component: PPT_15
+    },
+    {
+        path: '16',
+        component: PPT_16
+    },
+    {
+        path: '17',
+        component: PPT_17
+    },
+    {
+        path: '18',
+        component: PPT_18
+    },
+    {
+        path: '19',
+        component: PPT_19
+    },
+    {
+        path: '20',
+        component: PPT_20
+    },
+    {
+        path: '21',
+        component: PPT_21
     }
     ]
 }]

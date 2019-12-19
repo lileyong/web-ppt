@@ -25,10 +25,10 @@ img {
     max-width: 100%;
 }
 code {
-    margin: 8px auto;
+    margin: 20px auto;
     padding: 8px 10px;
     display: block;
-    width: 80%;
+    width: 90%;
     line-height: 36px;
     background-color: #000;
     font-size: 24px;
@@ -100,11 +100,6 @@ code {
 }
 
 
-.ppt-steps-wrap[data-v-33cafa74] {
-    margin-top: 60px;
-}
-
-
 * {
     margin: 0;
     padding: 0;
@@ -168,7 +163,7 @@ body {
 
 
 .ppt-title[data-v-18898456] {
-    padding: 20px 35px;
+    padding: 20px 35px 30px 35px;
     line-height: 48px;
     font-size: 36px;
     font-weight: bolder;
@@ -177,44 +172,13 @@ body {
 
 
 .ppt-text[data-v-7e7e0dc2] {
-    padding: 30px 5%;
+    padding: 20px 5%;
     width: 90%;
     line-height: 36px;
     font-size: 24px;
 }
 
+.ppt-steps[data-v-2de594b6]{display:flex;flex-wrap:wrap;justify-content:center;margin:auto;max-width:90%}.ppt-steps .step-item[data-v-2de594b6]{position:relative;margin:0 20px 20px 0;padding:6px 24px;line-height:36px;border-radius:24px;background-color:#0cb46a;font-size:18px;color:#fff}.ppt-steps .step-item[data-v-2de594b6]::after{content:'';position:absolute;right:-20px;top:23px;display:block;width:20px;height:2px;background-color:#0cb46a}.ppt-steps .step-item[data-v-2de594b6]:last-child{margin-right:0}.ppt-steps .step-item[data-v-2de594b6]:last-child::after{display:none}
 
-.ppt-steps[data-v-2de594b6] {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: auto;
-    max-width: 90%;
-}
-.step-item[data-v-2de594b6] {
-    position: relative;
-    margin: 0 20px 20px 0;
-    padding: 6px 24px;
-    line-height: 36px;
-    border-radius: 24px;
-    background-color: #0cb46a;
-    font-size: 18px;
-    color: #fff;
-}
-.step-item[data-v-2de594b6]::after {
-    content: '';
-    position: absolute;
-    right: -20px;
-    top: 23px;
-    display: block;
-    width: 20px;
-    height: 2px;
-    background-color: #0cb46a;
-}
-.step-item[data-v-2de594b6]:last-child {
-    margin-right: 0;
-}
-.step-item[data-v-2de594b6]:last-child::after {
-    display: none;
-}
+.ppt-list[data-v-4cc84410]{margin:0 auto;width:90%}.ppt-list .list-item[data-v-4cc84410]{position:relative;display:flex;align-items:center;padding:10px 0;font-size:24px;color:#0cb46a}.ppt-list .list-item[data-v-4cc84410]::before{content:'';margin-right:10px;display:block;width:20px;height:20px;background-color:#0cb46a}
 

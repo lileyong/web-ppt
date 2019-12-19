@@ -12,7 +12,7 @@ export default {
 
 <style scoped>
 .ppt-text {
-    padding: 30px 5%;
+    padding: 20px 5%;
     width: 90%;
     line-height: 36px;
     font-size: 24px;
