@@ -3,7 +3,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { VueLoaderPlugin } = require('vue-loader')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
-const PrerenderSPAPlugin = require('prerender-spa-plugin')
 
 module.exports = function (env, argv) {
     const cssLoader = [
@@ -70,14 +69,7 @@ module.exports = function (env, argv) {
                 }
             ]
         },
-        plugins: [
-            new HtmlWebpackPlugin(),
-            new VueLoaderPlugin(),
-            new PrerenderSPAPlugin({
-                staticDir: path.resolve(__dirname, 'dist'),
-                routes: ['/', '/prerender/1']
-            })
-        ],
+        plugins: [new HtmlWebpackPlugin(), new VueLoaderPlugin()],
         resolve: {
             alias: {
                 src: path.resolve(__dirname, 'src')
