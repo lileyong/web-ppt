@@ -3,7 +3,7 @@
         <ppt-title>使用注意事项</ppt-title>
         <ppt-list :list="list"></ppt-list>
         <section>
-            <img src="src/img/prerender/duplicate-content.png" width="1200px" />
+            <img src="../../img/prerender/duplicate-content.png" width="1200px" />
         </section>
     </div>
 </template>

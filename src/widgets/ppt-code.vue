@@ -1,5 +1,5 @@
 <template>
-    <div v-highlight>
+    <div v-highlight class="ppt-code">
         <slot></slot>
     </div>
 </template>

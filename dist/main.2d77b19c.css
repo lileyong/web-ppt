@@ -6,6 +6,7 @@
 }
 .ppt.center {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -89,23 +90,6 @@ code {
     height: 3px;
     background-color: #24c77e;
 }
-
-
-.container[data-v-33a0b3f1] {
-    position: relative;
-    width: 544px;
-    height: 124px;
-    border-radius: 62px;
-    background-color: rgb(76, 166, 102);
-}
-.container .spokesman[data-v-33a0b3f1] {
-    position: absolute;
-    right: 16px;
-    top: -42px;
-    margin: 0;
-}
-
-section[data-v-33aecb72]{width:auto}
 
 section[data-v-426c92b3]{display:flex;justify-content:space-between}
 

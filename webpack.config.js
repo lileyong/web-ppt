@@ -1,12 +1,8 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const {
-    VueLoaderPlugin
-} = require('vue-loader')
+const { VueLoaderPlugin } = require('vue-loader')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const {
-    CleanWebpackPlugin
-} = require('clean-webpack-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const PrerenderSPAPlugin = require('prerender-spa-plugin')
 
 module.exports = function (env, argv) {
@@ -20,48 +16,59 @@ module.exports = function (env, argv) {
         mode: env.production ? 'production' : 'development',
         entry: {
             main: 'src/index.js',
-            vendor: ['vue']
+            vendor: ['vue', 'vue-hljs', 'vue-router']
         },
         devServer: {
             open: true,
             historyApiFallback: true
         },
         module: {
-            rules: [{
-                enforce: 'pre',
-                test: /\.(js|vue)$/,
-                loader: 'eslint-loader',
-                options: {
-                    fix: true
-                }
-            }, {
-                test: /\.vue$/,
-                use: 'vue-loader'
-            }, {
-                test: /\.css$/,
-                use: cssLoader
-            }, {
-                test: /\.(scss|sass)$/,
-                use: cssLoader.concat('sass-loader')
-            }, {
-                test: /\.styl$/,
-                use: cssLoader.concat('stylus-loader')
-            }, {
-                test: /\.jsx$/,
-                loader: 'babel-loader'
-            }, {
-                test: /\.(jpg|jpeg|png|svg|gif)$/,
-                use: [{
-                    loader: 'url-loader',
+            rules: [
+                {
+                    enforce: 'pre',
+                    test: /\.(js|vue)$/,
+                    loader: 'eslint-loader',
                     options: {
-                        limit: 1024,
-                        name: '[name].[ext]'
+                        fix: true
                     }
-                }]
-            }, {
-                test: /\.(ttf|eot|woff)$/,
-                loader: 'file-loader'
-            }]
+                },
+                {
+                    test: /\.vue$/,
+                    use: 'vue-loader'
+                },
+                {
+                    test: /\.css$/,
+                    use: cssLoader
+                },
+                {
+                    test: /\.(scss|sass)$/,
+                    use: cssLoader.concat('sass-loader')
+                },
+                {
+                    test: /\.styl$/,
+                    use: cssLoader.concat('stylus-loader')
+                },
+                {
+                    test: /\.jsx$/,
+                    loader: 'babel-loader'
+                },
+                {
+                    test: /\.(jpg|jpeg|png|svg|gif)$/,
+                    use: [
+                        {
+                            loader: 'url-loader',
+                            options: {
+                                limit: 1024,
+                                name: '[name].[ext]'
+                            }
+                        }
+                    ]
+                },
+                {
+                    test: /\.(ttf|eot|woff)$/,
+                    loader: 'file-loader'
+                }
+            ]
         },
         plugins: [
             new HtmlWebpackPlugin(),

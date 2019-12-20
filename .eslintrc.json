@@ -23,6 +23,7 @@
             "error",
             4
         ],
-        "no-tabs": "off"
+        "no-new": "off",
+        "comma-dangle": "off"
     }
 }

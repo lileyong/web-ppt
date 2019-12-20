@@ -6,19 +6,3 @@
         </ppt-spokesman>
     </div>
 </template>
-
-<style scoped>
-.container {
-    position: relative;
-    width: 544px;
-    height: 124px;
-    border-radius: 62px;
-    background-color: rgb(76, 166, 102);
-}
-.container .spokesman {
-    position: absolute;
-    right: 16px;
-    top: -42px;
-    margin: 0;
-}
-</style>
