@@ -1,6 +1,7 @@
 <template>
     <div class="ppt superiority">
-        <ppt-title>参考文档</ppt-title>
+        <ppt-title>总结</ppt-title>
+        <ppt-text>经过这次收银台预渲染改造，我学到了不少，总结以下几点：</ppt-text>
         <ppt-list :list="list"></ppt-list>
     </div>
 </template>
@@ -9,17 +10,11 @@
 export default {
     data () {
         return {
-            list: [
-                {
-                    title: 'prerender-spa-plugin：https://github.com/chrisvfritz/prerender-spa-plugin'
-                },
-                {
-                    title: 'puppeteer：https://github.com/puppeteer/puppeteer'
-                },
-                {
-                    title: 'troubleshooting：https://github.com/puppeteer/puppeteer/blob/master/docs/troubleshooting.md#chrome-headless-doesnt-launch-on-unix'
-                }
-            ]
+            list: [{
+                title: '需加强Linux命令学习'
+            }, {
+                title: 'BOSS系统构建机系统过于老旧，需要有话语权的人推动升级'
+            }]
         }
     }
 }

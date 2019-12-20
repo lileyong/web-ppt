@@ -1,5 +1,8 @@
 <template>
     <div class="ppt superiority">
-        <ppt-title>曙光：测试环境BOSS系统构建成功</ppt-title>
+        <ppt-title>探索：在官网找到修复方案</ppt-title>
+        <section>
+            <img src="src/img/prerender/centos-dependencies.png" />
+        </section>
     </div>
 </template>

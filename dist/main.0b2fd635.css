@@ -19,8 +19,13 @@
     height: 48px;
     background: url(superiority.png) center center / 100% 100% no-repeat;
 }
+section {
+    margin: auto;
+    width: 90%;
+    overflow: hidden;
+}
 img {
-    margin: 0 auto;
+    margin-top: 20px;
     display: block;
     max-width: 100%;
 }
@@ -30,6 +35,7 @@ code {
     display: block;
     width: 90%;
     line-height: 36px;
+    box-sizing: border-box;
     background-color: #000;
     font-size: 24px;
     color: #fff;
@@ -98,6 +104,10 @@ code {
     top: -42px;
     margin: 0;
 }
+
+section[data-v-33aecb72]{width:auto}
+
+section[data-v-426c92b3]{display:flex;justify-content:space-between}
 
 
 * {

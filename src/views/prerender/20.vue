@@ -1,7 +1,10 @@
 <template>
     <div class="ppt superiority">
         <ppt-title>改造过程-BOSS系统部署调试</ppt-title>
-        <ppt-text>本地构建成功，在BOSS系统构建却失败了。原因是CentOS上puppeteer依赖的.so文件安装失败。</ppt-text>
+        <ppt-text>本地构建成功，在BOSS系统构建却失败了。ldd后发现是CentOS上chrome依赖的动态链接库（so文件）缺失。</ppt-text>
+        <ppt-code>
+            <pre><code>ldd /var/boss/git@repo.we.com/build/source/dsp-tc-pay.test/node_modules/puppeteer/.local-chromium/linux-686378/chrome-linux/chrome</code></pre>
+        </ppt-code>
         <ppt-code>
             <pre><code>chrome version: linux-686378
 lake:

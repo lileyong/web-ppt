@@ -25,6 +25,7 @@ import PPT_23 from 'src/views/prerender/23.vue'
 import PPT_24 from 'src/views/prerender/24.vue'
 import PPT_25 from 'src/views/prerender/25.vue'
 import PPT_26 from 'src/views/prerender/26.vue'
+import PPT_27 from 'src/views/prerender/27.vue'
 
 const routes = [{
     path: '/prerender',
@@ -133,6 +134,10 @@ const routes = [{
     {
         path: '26',
         component: PPT_26
+    },
+    {
+        path: '27',
+        component: PPT_27
     }
     ]
 }]

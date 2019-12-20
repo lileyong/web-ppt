@@ -22,6 +22,7 @@
         "indent": [
             "error",
             4
-        ]
+        ],
+        "no-tabs": "off"
     }
 }

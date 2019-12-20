@@ -7,3 +7,9 @@
         </section>
     </div>
 </template>
+
+<style lang="scss" scoped>
+section {
+    width: auto;
+}
+</style>
