@@ -11,6 +11,7 @@
             "trailingComma": "es5"
         }
     },
+    "prettier.semi": false,
     "vetur.format.defaultFormatter.html": "prettyhtml",
     "vetur.format.defaultFormatter.js": "vscode-typescript",
     "javascript.format.insertSpaceBeforeFunctionParenthesis": true,

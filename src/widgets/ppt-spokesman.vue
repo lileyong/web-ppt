@@ -1,6 +1,6 @@
 <template>
     <div class="spokesman-box">
-        <img class="spokesman" src="../img/spokesman.png" />
+        <img class="spokesman" src="https://lileyong.github.io/web-ppt/dist/install.png" />
         <slot></slot>
     </div>
 </template>
